@@ -31,6 +31,7 @@ kafka-console-consumer --topic demo-2-distributed --from-beginning --bootstrap-s
 docker-compose up kafka-cluster elasticsearch postgres
 
 # We make sure elasticsearch is working. Replace 127.0.0.1 by 192.168.99.100 if needed
+ 
 http://127.0.0.1:9200/
 # Go to the connect UI and apply the configuration at :
 sink/demo-elastic/sink-elastic-twitter-distributed.properties
@@ -41,3 +42,4 @@ http://127.0.0.1:9200/_plugin/dejavu
 http://127.0.0.1:9200/demo-3-twitter/_count
 # You can download the data from the UI to see what it looks like
 # We can query elasticsearch for users who have a lot of friends, see query-high-friends.json
+![image](https://user-images.githubusercontent.com/15971678/146482183-de0f3653-feef-4079-809a-0a3241fb569c.png)
